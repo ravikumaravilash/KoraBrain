@@ -1,0 +1,5 @@
+*.msi
+*.exe
+node_modules/
+*.log
+.env

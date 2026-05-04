@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>KORA Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+    }
+    header {
+      background: #4facfe;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .menu {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .menu a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+    }
+    .menu a:hover {
+      background: #eee;
+    }
+    .intro {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>KORA</h1>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <div class="intro">
+    <h2>About KORA</h2>
+    <p>KORA is your cultural companion — explore monuments, traditions, foods, and etiquette from around the world.</p>
+  </div>
+
+  <div class="menu" id="menu">
+    <a href="monuments.html">Monuments</a>
+    <a href="gps.html">GPS Suggestions</a>
+    <a href="#">Cultures</a>
+    <a href="#">Foods</a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

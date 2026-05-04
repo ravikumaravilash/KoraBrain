@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KORA - Monument Details</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { margin:0; font-family:Arial,sans-serif; background:#f0f0f0; }
+    header { background:#4facfe; color:white; padding:15px; display:flex; justify-content:space-between; align-items:center; }
+    .menu-icon { font-size:24px; cursor:pointer; }
+    .menu { display:none; position:absolute; top:60px; right:20px; background:white; border:1px solid #ccc; border-radius:8px; }
+    .menu a { display:block; padding:10px; text-decoration:none; color:#333; }
+    .menu a:hover { background:#eee; }
+    .content { padding:20px; }
+    .card { background:white; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.1); padding:20px; }
+    .card img { width:100%; max-height:300px; object-fit:cover; border-radius:6px; }
+    #map { width:100%; height:300px; margin-top:20px; border-radius:6px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>KORA</h1>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <div class="menu" id="menu">
+    <a href="monuments.html">Monuments</a>
+    <a href="gps.html">GPS Suggestions</a>
+    <a href="home.html">Home</a>
+  </div>
+
+  <div class="content">
+    <div id="details" class="card"></div>
+    <div id="map"></div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // Get monument name from URL
+    const params = new URLSearchParams(window.location.search);
+    const monumentName = params.get("name");
+
+    // Fetch monument details
+    fetch('/monuments')
+      .then(res => res.json())
+      .then(monuments => {
+        const m = monuments.find(mon => mon.name === monumentName);
+        if (!m) return;
+
+        // Render details with Read More toggle
+        const shortStory = m.stories[0];
+        const extraStories = m.stories.slice(1).join('<br>');
+        const storyId = "story";
+
+        document.getElementById("details").innerHTML = `
+          <img src="${m.imageUrl}" alt="${m.name}">
+          <h2>${m.name}</h2>
+          <p><em>${m.location}</em></p>
+          <p><strong>Built By:</strong> ${m.builtBy}</p>
+          <p><strong>Year Built:</strong> ${m.yearBuilt}</p>
+          <p><strong>Stories:</strong> ${shortStory}
+            ${extraStories ? `<span id="${storyId}" style="display:none;"><br>${extraStories}</span>` : ''}
+            ${extraStories ? `<button onclick="toggleStory('${storyId}')">Read More</button>` : ''}
+          </p>
+          <p><strong>Etiquette:</strong> ${m.etiquette.join(', ')}</p>
+          <p><strong>Food:</strong> ${m.food.join(', ')}</p>
+        `;
+
+        // Load Google Map
+        const mapUrl = `https://www.google.com/maps?q=${m.latitude},${m.longitude}&output=embed`;
+        document.getElementById("map").innerHTML = `<iframe src="${mapUrl}" width="100%" height="300" style="border:0;" allowfullscreen></iframe>`;
+      });
+
+    function toggleStory(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'none' ? 'inline' : 'none';
+    }
+  </script>
+</body>
+</html>

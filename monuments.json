@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Brihadeeswarar Temple",
+    "location": "Thanjavur, India",
+    "builtBy": "Raja Raja Chola I",
+    "yearBuilt": "1010 AD",
+    "stories": [
+      "Built in the 11th century as a symbol of Chola dynasty power.",
+      "The temple tower rises to 66 meters, one of the tallest in the world.",
+      "UNESCO World Heritage site, part of the Great Living Chola Temples.",
+      "Known for its massive granite structures and intricate frescoes.",
+      "The temple was constructed entirely of granite, despite no quarries nearby."
+    ],
+    "etiquette": ["Remove footwear", "Dress modestly", "Respect rituals"],
+    "food": ["South Indian thali", "Sambar", "Rasam"],
+    "imageUrl": "images/brihadeeswarar.jpg",
+    "latitude": 10.7828,
+    "longitude": 79.1318
+  },
+  {
+    "name": "Jagannath Temple",
+    "location": "Puri, India",
+    "builtBy": "King Anantavarman Chodaganga Deva",
+    "yearBuilt": "12th century",
+    "stories": [
+      "One of the Char Dham pilgrimage sites.",
+      "Famous for the annual Rath Yatra festival.",
+      "The temple kitchen is considered the largest in the world, feeding thousands daily.",
+      "Legends say the idols are replaced every 12 years in a sacred ritual.",
+      "The temple’s flag is changed every day, symbolizing divine protection."
+    ],
+    "etiquette": ["Non-Hindus not allowed inside sanctum", "Respect local customs"],
+    "food": ["Mahaprasad", "Dalma", "Chhena Poda"],
+    "imageUrl": "images/jagannath.jpg",
+    "latitude": 19.8047,
+    "longitude": 85.8183
+  },
+  {
+    "name": "Kedarnath Temple",
+    "location": "Uttarakhand, India",
+    "builtBy": "Adi Shankaracharya",
+    "yearBuilt": "8th century",
+    "stories": [
+      "Dedicated to Lord Shiva, part of Char Dham Yatra.",
+      "Survived multiple floods and natural disasters.",
+      "Believed to be built near the site where Pandavas sought forgiveness.",
+      "The temple is surrounded by snow-clad peaks, adding to its mystique.",
+      "Pilgrims believe visiting Kedarnath cleanses sins and grants liberation."
+    ],
+    "etiquette": ["Dress warmly", "Respect pilgrimage traditions"],
+    "food": ["Rajma chawal", "Aloo paratha"],
+    "imageUrl": "images/kedarnath.jpg",
+    "latitude": 30.7346,
+    "longitude": 79.0669
+  },
+  {
+    "name": "Konark Sun Temple",
+    "location": "Odisha, India",
+    "builtBy": "King Narasimhadeva I",
+    "yearBuilt": "13th century",
+    "stories": [
+      "Temple shaped like a giant chariot with 24 wheels.",
+      "Dedicated to the Sun God, Surya.",
+      "Intricate carvings depict daily life, animals, and celestial beings.",
+      "Legends say the temple once had a massive lodestone that disrupted ships' compasses.",
+      "The wheels of the temple also function as sundials, showing time accurately."
+    ],
+    "etiquette": ["Respect heritage site", "No climbing"],
+    "food": ["Pakhala bhata", "Dalma"],
+    "imageUrl": "images/konark.jpg",
+    "latitude": 19.8875,
+    "longitude": 86.0947
+  },
+  {
+    "name": "Somnath Temple",
+    "location": "Gujarat, India",
+    "builtBy": "Unknown (rebuilt multiple times)",
+    "yearBuilt": "First built in antiquity",
+    "stories": [
+      "One of the 12 Jyotirlinga shrines of Shiva.",
+      "Destroyed and rebuilt over 17 times in history.",
+      "Visited by Mahmud of Ghazni, who looted its treasures.",
+      "Modern reconstruction was completed in 1951 under Sardar Patel.",
+      "The temple is believed to have been originally built by the Moon God."
+    ],
+    "etiquette": ["Remove footwear", "Respect rituals"],
+    "food": ["Gujarati thali", "Dhokla"],
+    "imageUrl": "images/somnath.jpg",
+    "latitude": 20.888,
+    "longitude": 70.4014
+  },
+  {
+    "name": "Akshardham Temple",
+    "location": "Delhi, India",
+    "builtBy": "Pramukh Swami Maharaj",
+    "yearBuilt": "2005",
+    "stories": [
+      "Modern Hindu temple showcasing Indian culture and spirituality.",
+      "Features a massive central monument carved from pink sandstone.",
+      "Includes exhibitions on Indian history, values, and traditions.",
+      "The musical fountain depicts the cycle of life and death.",
+      "The temple complex also houses gardens symbolizing peace and harmony."
+    ],
+    "etiquette": ["No photography inside sanctum", "Respect silence"],
+    "food": ["North Indian cuisine", "Chaat"],
+    "imageUrl": "images/akshardham.jpg",
+    "latitude": 28.6125,
+    "longitude": 77.2772
+  },
+  {
+    "name": "Angkor Wat",
+    "location": "Siem Reap, Cambodia",
+    "builtBy": "King Suryavarman II",
+    "yearBuilt": "12th century",
+    "stories": [
+      "Largest religious monument in the world.",
+      "Originally Hindu, later converted to Buddhist worship.",
+      "Its bas-reliefs depict epic stories from Ramayana and Mahabharata.",
+      "The temple is aligned with celestial events like equinoxes.",
+      "Angkor Wat symbolizes Mount Meru, the center of the universe in Hindu cosmology."
+    ],
+    "etiquette": ["Dress modestly", "No touching carvings"],
+    "food": ["Amok curry", "Khmer noodles"],
+    "imageUrl": "images/angkorwat.jpg",
+    "latitude": 13.4125,
+    "longitude": 103.8667
+  },
+  {
+    "name": "Machu Picchu",
+    "location": "Peru",
+    "builtBy": "Inca Emperor Pachacuti",
+    "yearBuilt": "15th century",
+    "stories": [
+      "Inca citadel rediscovered in 1911 by Hiram Bingham.",
+      "Believed to be a royal estate or sacred religious site.",
+      "Its terraces showcase advanced Inca agricultural techniques.",
+      "UNESCO World Heritage site and one of the New Seven Wonders.",
+      "The site was built without mortar, yet stones fit perfectly together."
+    ],
+    "etiquette": ["Stay on marked paths", "No littering"],
+    "food": ["Ceviche", "Quinoa dishes"],
+    "imageUrl": "images/machupicchu.jpg",
+    "latitude": -13.1633,
+    "longitude": -72.5456
+  },
+  {
+    "name": "Petra",
+    "location": "Jordan",
+    "builtBy": "Nabataean Arabs",
+    "yearBuilt": "5th century BC",
+    "stories": [
+      "City carved into rose-red cliffs.",
+      "Known as the 'Lost City' rediscovered in 1812.",
+      "The Treasury (Al-Khazneh) is its most iconic structure.",
+      "Petra was a major trading hub connecting Arabia, Egypt, and Syria.",
+      "The city had advanced water management systems with aqueducts and cisterns."
+    ],
+    "etiquette": ["Respect heritage site", "No climbing"],
+    "food": ["Mansaf", "Falafel"],
+    "imageUrl": "images/petra.jpg",
+    "latitude": 30.3286,
+    "longitude": 35.4427
+  },
+  {
+    "name": "Borobudur Temple",
+    "location": "Java, Indonesia",
+    "builtBy": "Sailendra Dynasty",
+    "yearBuilt": "9th century",
+    "stories": [
+      "Largest Buddhist monument in the world.",
+      "Built as a mandala representing the Buddhist cosmos.",
+      "Contains over 500 Buddha statues and 2,600 relief panels.",
+      "Abandoned after volcanic eruptions, rediscovered in the 19th century.",
+      "The temple is designed as a step pyramid symbolizing the path to enlightenment."
+    ],
+    "etiquette": ["Dress modestly", "Respect Buddhist rituals"],
+    "food": ["Nasi goreng", "Satay"],
+    "imageUrl": "images/borobudur.jpg",
+    "latitude": -7.6074,
+    "longitude": 110.2038
+  }
+]

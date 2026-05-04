@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KORA - GPS Suggestions</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+    }
+    header {
+      background: #4facfe;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .menu-icon {
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .menu {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .menu a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+    }
+    .menu a:hover {
+      background: #eee;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .card h3 {
+      margin: 10px 0 5px;
+      color: #4facfe;
+    }
+    .card p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #555;
+    }
+    .card button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: #4facfe;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .card button:hover {
+      background: #357ae8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>KORA</h1>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <div class="menu" id="menu">
+    <a href="monuments.html">Monuments</a>
+    <a href="gps.html">GPS Suggestions</a>
+    <a href="home.html">Home</a>
+    <a href="#">Cultures</a>
+    <a href="#">Foods</a>
+  </div>
+
+  <h2 style="padding:20px;">Nearby Monuments</h2>
+  <div id="suggestions" class="cards"></div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+    }
+
+    function showPosition(position) {
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
+
+      fetch(`/gps?lat=${lat}&lon=${lon}`)
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById("suggestions").innerHTML =
+            data.map(item => `
+              <div class="card">
+                <img src="${item.imageUrl}" alt="${item.name}">
+                <h3>${item.name}</h3>
+                <p>${item.location}</p>
+                <p><strong>Distance:</strong> ${item.distance}</p>
+                <button onclick="window.location.href='monument.html?name=${encodeURIComponent(item.name)}'">View Details</button>
+              </div>
+            `).join("");
+        });
+    }
+
+    function showError(error) {
+      alert("Error getting location: " + error.message);
+    }
+
+    window.onload = getLocation;
+  </script>
+</body>
+</html>
